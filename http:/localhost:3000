@@ -1,0 +1,30 @@
+---
+
+## 5) `public/favicon.ico` e `public/og-image.jpg`
+Põe ícones/imagens lá — se não tiveres ainda, usa placeholders (pode depois substituir).
+
+---
+
+## 6) `src/app/layout.tsx`
+```tsx
+export const metadata = {
+  title: "JerseySingles — Dating for Jersey & UK",
+  description: "JerseySingles: a community for real connections. Join the waitlist!",
+  openGraph: {
+    title: "JerseySingles — Dating for Jersey & UK",
+    description: "JerseySingles: a community for real connections. Join the waitlist!",
+    images: "/og-image.jpg",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en-GB">
+      <body>{children}</body>
+    </html>
+  );
+}
